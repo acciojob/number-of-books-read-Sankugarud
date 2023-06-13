@@ -12,12 +12,17 @@ const library = [
   {
     author: "Suzanne Collins",
     title: "Mockingjay: The Final Book of The Hunger Games",
-    readingStatus: false,
+    readingStatus: true,
   },
 ];
-
+let count = 0;
 const numberOfBooksRead = () => {
-  // write your code here
+  library.map( (event) => {
+	  if(event.readingStatus == true){
+		  count++;
+	  }
+  })
+	return count;
 };
 
 // Do not change the code below
